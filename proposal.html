@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initiate Project | The Systems Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FAFAFA; color: #1A1A1A; }
+        h1, h2, h3 { font-family: 'Instrument Serif', serif; }
+        .form-input { 
+            background: transparent; 
+            border-bottom: 1px solid rgba(0,0,0,0.1); 
+            transition: border-color 0.4s ease; 
+        }
+        .form-input:focus { 
+            outline: none; 
+            border-bottom-color: #000; 
+        }
+        .step-number { font-family: 'Instrument Serif', serif; opacity: 0.2; }
+    </style>
+</head>
+<body class="pt-32 pb-20">
+
+    <nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-white/80 backdrop-blur-md border-b border-black/5">
+        <div class="text-xl font-bold tracking-tighter uppercase"><a href="index.html">Firstname Lastname.</a></div>
+        <div class="space-x-8 text-sm uppercase tracking-widest hidden md:flex">
+            <a href="index.html#work" class="hover:opacity-50 transition-soft">Work</a>
+            <a href="services.html" class="hover:opacity-50 transition-soft">Services</a>
+            <a href="index.html#contact" class="hover:opacity-50 transition-soft">Contact</a>
+        </div>
+    </nav>
+
+    <section class="px-8 md:px-20 mb-16">
+        <h1 class="text-6xl md:text-8xl italic mb-6">Initiate.</h1>
+        <p class="text-xl max-w-2xl opacity-60">Answer these five questions to help me deconstruct your project requirements.</p>
+    </section>
+
+    <section class="px-8 md:px-20 max-w-4xl">
+        <form action="#" method="POST" class="space-y-24">
+            
+            <div class="space-y-8">
+                <div class="flex items-baseline gap-4">
+                    <span class="step-number text-6xl">01</span>
+                    <h2 class="text-4xl italic">Who are you representing?</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <input type="text" placeholder="Full Name" class="form-input py-4 w-full" required>
+                    <input type="email" placeholder="Professional Email" class="form-input py-4 w-full" required>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="flex items-baseline gap-4">
+                    <span class="step-number text-6xl">02</span>
+                    <h2 class="text-4xl italic">Select your preferred system.</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <label class="cursor-pointer">
+                        <input type="radio" name="tier" value="blueprint" class="hidden peer">
+                        <div class="border border-black/10 p-6 peer-checked:border-black peer-checked:bg-white transition-soft">
+                            <p class="text-xs uppercase tracking-widest mb-2">01</p>
+                            <p class="font-bold italic">The Blueprint</p>
+                        </div>
+                    </label>
+                    <label class="cursor-pointer">
+                        <input type="radio" name="tier" value="system" class="hidden peer" checked>
+                        <div class="border border-black/10 p-6 peer-checked:border-black peer-checked:bg-white transition-soft">
+                            <p class="text-xs uppercase tracking-widest mb-2">02</p>
+                            <p class="font-bold italic">The System</p>
+                        </div>
+                    </label>
+                    <label class="cursor-pointer">
+                        <input type="radio" name="tier" value="partner" class="hidden peer">
+                        <div class="border border-black/10 p-6 peer-checked:border-black peer-checked:bg-white transition-soft">
+                            <p class="text-xs uppercase tracking-widest mb-2">03</p>
+                            <p class="font-bold italic">The Partner</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="flex items-baseline gap-4">
+                    <span class="step-number text-6xl">03</span>
+                    <h2 class="text-4xl italic">What is the core problem?</h2>
+                </div>
+                <textarea rows="4" placeholder="Describe the friction or complexity you are facing..." class="form-input py-4 w-full resize-none"></textarea>
+            </div>
+
+            <div class="space-y-8">
+                <div class="flex items-baseline gap-4">
+                    <span class="step-number text-6xl">04</span>
+                    <h2 class="text-4xl italic">Desired Launch Window.</h2>
+                </div>
+                <select class="form-input py-4 w-full bg-transparent">
+                    <option value="urgent">As soon as possible (1-2 weeks)</option>
+                    <option value="standard" selected>Standard (4-6 weeks)</option>
+                    <option value="long-term">Long-term (3 months+)</option>
+                </select>
+            </div>
+
+            <div class="pt-12">
+                <button type="submit" class="group flex items-baseline gap-4 hover:opacity-50 transition-soft">
+                    <h2 class="text-6xl md:text-8xl italic">Send Request.</h2>
+                    <span class="text-2xl transition-transform group-hover:translate-x-4">→</span>
+                </button>
+            </div>
+
+        </form>
+    </section>
+
+    <footer class="mt-40 px-8 md:px-20 py-12 border-t border-black/5 opacity-30 text-[10px] uppercase tracking-widest">
+        © 2026 Architectural Systems | Process-Driven Growth
+    </footer>
+
+</body>
+</html>
